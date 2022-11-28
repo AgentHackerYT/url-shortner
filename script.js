@@ -1,7 +1,7 @@
 window.onload = () =>{
     const list = document.getElementById("url-label")
     const got = localStorage.getItem("links")
-    const arranged = got.split(";;;").map(x => x).join("\n")
+    const arranged = got?.split(";;;").map(x => x).join("\n")
     list.innerHTML = arranged
     const button = document.querySelector("#shorten");
     const input = document.querySelector("#input-field");
