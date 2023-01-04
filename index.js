@@ -39,7 +39,7 @@ try{
         if(!url) return res.send({"error": "No URL Param found"})
         let id = idGen()
         let thereIs = true
-        while(thereIs == false){
+        while(thereIs !== false){
             const check = await db.has(id)  
             if(check) return id = idGen()
             thereIs = false
